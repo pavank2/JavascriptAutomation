@@ -31,6 +31,7 @@
    - git clone https://github.com/pavank2/JavascriptAutomation.git
 
 5. Navigate to the Project folder and install the dependencies (added in package.json)
+   - cd JavascriptAutomation
    - npm init (Go with the default values)
    - npm install
 6. Run the tests!
