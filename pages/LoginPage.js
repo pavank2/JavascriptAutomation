@@ -26,6 +26,7 @@ class LoginPage {
   };
 
   clickOnLogin = () => {
+    browser.sleep(2000);
     this.loginBtn.click();
   };
 }
