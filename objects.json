@@ -1,0 +1,21 @@
+{
+   "LoginPage": {
+      "username":"user-name",
+      "password":"password",
+      "login"   :"login-button"
+   },
+
+   "HomePage": {
+      "products":"div[class='peek']",
+      "backpack": "add-to-cart-sauce-labs-backpack",
+      "bikelight": "add-to-cart-sauce-labs-bike-light",
+      "checkout": "shopping_cart_container"
+   },
+
+   "CheckOutPage":{
+      "title": "span[class='title']",
+      "remove": "remove-sauce-labs-backpack",
+      "proceedToPurchase" : "checkout"
+   }
+   
+}

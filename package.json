@@ -1,0 +1,19 @@
+{
+  "name": "protractorproject",
+  "version": "1.0.0",
+  "description": "protractorproject",
+  "main": "index.js",
+  "scripts": {
+    "tests": "protractor conf.js"
+  },
+  "author": "PK",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "*",
+    "chai-as-promised": "*",
+    "path": "^0.12.7",
+    "properties-reader": "^1.0.0",
+    "protractor": "^7.0.0",
+    "jasmine": "*"
+  }
+}
