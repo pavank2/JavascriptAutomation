@@ -10,6 +10,7 @@
 - Windows 10
 - Java 15.0.2
 - node v12.19.0
+- npm 6.14.8
 
 ## Instructions to execute the Automation Suite
 
