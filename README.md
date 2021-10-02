@@ -26,7 +26,7 @@
 
    - webdriver-manager start
 
-4. On a separate terminal, clone the Automation project to your local machine
+4. On a new terminal, clone the Automation project to your local machine
 
    - git clone https://github.com/pavank2/JavascriptAutomation.git
 

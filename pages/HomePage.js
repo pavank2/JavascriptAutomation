@@ -26,10 +26,6 @@ class HomePage {
     return this.itemCount.getText();
   };
 
-  //   getNumOfButtons = () => {
-  //     return element.all(By.xpath("//button[contains(@class,'btn')]")).count();
-  //   };
-
   selectDropDown = () => {
     this.dropDown.click();
     this.dropDownPrice.click();

@@ -11,28 +11,18 @@ describe("Checkout Page:", () => {
     browser.sleep(2000); // Adding sleep to slow down execution for the demo
     loginPage.enterCredentials("standard_user", "secret_sauce");
     loginPage.clickOnLogin();
-    //  homePage.addItemsToCart();
     homePage.continueToCheckOut();
   });
 
-  it("Verify Shopping cart items", () => {
+  it("Verify Shopping cart items", async () => {
     var actualItemsList = [];
     var expectedItemsList = ["Sauce Labs Backpack", "Sauce Labs Bike Light"];
-    checkoutPage.getCartItems().then(function (itemsList) {
-      for (let item of itemsList) {
-        item.getText().then(function (itemName) {
-          // if (!expectedItemsList.includes(itemName)) {
-          //   assert.fail("Items missing from cart");
-          // }
-          assert.isTrue(
-            expectedItemsList.includes(itemName),
-            "Actual items does not match expected items"
-          );
-        });
-      }
 
-      //  console.log(actualItemsList);
-    });
+    itemsList = await checkoutPage.getCartItems();
+    for (let item of itemsList) {
+      itemName = await item.getText();
+      assert.isTrue(expectedItemsList.includes(itemName), "Items not matching");
+    }
   });
 
   it("Enter User Details and Finish", () => {

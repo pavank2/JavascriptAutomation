@@ -18,11 +18,6 @@ class LoginPage {
     browser.sleep(2000);
     this.username.sendKeys(user);
     this.pass.sendKeys(pass);
-
-    // this.creds.getText().then(function (credslist) {
-    //   const credsArray = credslist.split("\n");
-    //   console.log(credsArray);
-    // });
   };
 
   clickOnLogin = () => {

@@ -2,6 +2,7 @@ var fs = require("fs");
 var path = require("path");
 
 //setDefaultTimeout(60 * 1000);
+var HtmlReporter = require("protractor-beautiful-reporter");
 
 exports.config = {
   seleniumAddress: "http://localhost:4444/wd/hub",
@@ -15,5 +16,10 @@ exports.config = {
 
   onPrepare: async () => {
     await browser.waitForAngularEnabled(false);
+    jasmine.getEnv().addReporter(
+      new HtmlReporter({
+        baseDirectory: "reports/screenshots",
+      }).getJasmine2Reporter()
+    );
   },
 };

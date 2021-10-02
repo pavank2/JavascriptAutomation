@@ -11,23 +11,17 @@ describe("HomePage functions", () => {
     loginPage.clickOnLogin();
   });
 
-  it("Sort items from Z to A", () => {
-    homePage.selectDropDown().then(function (selectedDropDown) {
-      expect(selectedDropDown).toEqual("Name (Z to A)");
-    });
+  it("Sort items from Z to A", async () => {
+    selectedDropDownText = await homePage.selectDropDown();
+    expect(selectedDropDownText).toEqual("Name (Z to A)");
   });
 
-  it("Select items and checkout", () => {
+  it("Select items and checkout", async () => {
     homePage.addItemsToCart();
 
     homePage.continueToCheckOut();
 
-    homePage.getItemCount().then(function (numOfItems) {
-      expect(numOfItems).toEqual("2");
-    });
-
-    // homePage.getNumOfButtons().then(function (numOfButtons) {
-    //   console.log(`Number of buttons:${numOfButtons}`);
-    // });
+    numOfItems = await homePage.getItemCount();
+    expect(numOfItems).toEqual("2");
   });
 });
