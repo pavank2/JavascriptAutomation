@@ -36,5 +36,7 @@
    - npm install
 6. Run the tests!
    - npm run tests
+7. On the command prompt, notice the tests executing (passed test/spec is represented with a dot ".")
+8. HTML report of the latest execution can be seen at {PROJECT_HOME}/reports/screenshots/report.html
 
 If something is not working, please feel free to contact me :-)
