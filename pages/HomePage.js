@@ -48,7 +48,7 @@ class HomePage {
   logout = async () => {
     await this.burgerMenu.click();
     await browser.wait(
-      ec.visibilityOf(element(By.id("logout_sidebar_link")), 5000)
+      EC.visibilityOf(element(By.id("logout_sidebar_link")), 5000)
     );
     await this.logoutBtn.click();
   };

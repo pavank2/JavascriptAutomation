@@ -16,5 +16,16 @@
     "protractor": "^7.0.0",
     "jasmine": "*",
     "protractor-beautiful-reporter": "^1.3.6"
-  }
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pavank2/JavascriptAutomation.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pavank2/JavascriptAutomation/issues"
+  },
+  "homepage": "https://github.com/pavank2/JavascriptAutomation#readme"
 }
