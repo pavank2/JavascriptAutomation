@@ -9,14 +9,14 @@ class LoginPage {
   creds = element(By.xpath("//div[@id='login_credentials']"));
 
   enterCredentials = (user, pass) => {
-    browser.sleep(2000);
     this.username.sendKeys(user);
     this.pass.sendKeys(pass);
+    browser.sleep(1000);
   };
 
   clickOnLogin = () => {
-    browser.sleep(2000);
     this.loginBtn.click();
+    browser.sleep(2000);
   };
 
   getLoginButton = () => {

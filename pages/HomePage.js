@@ -1,4 +1,5 @@
 const { element, browser, By } = require("protractor");
+var EC = protractor.ExpectedConditions;
 
 class HomePage {
   title = element(By.className("title"));
@@ -11,8 +12,6 @@ class HomePage {
   burgerMenu = element(By.id("react-burger-menu-btn"));
   logoutBtn = element(By.id("logout_sidebar_link"));
   shoppingCartItems = element(By.className("shopping_cart_badge"));
-
-  ec = protractor.ExpectedConditions;
 
   getTitle = () => {
     return this.title;
@@ -30,7 +29,7 @@ class HomePage {
     browser.sleep(2000);
   };
 
-  continueToCheckOut = () => {
+  continueToCheckOut = async () => {
     this.checkout.click();
     browser.sleep(2000);
   };

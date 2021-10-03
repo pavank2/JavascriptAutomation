@@ -8,18 +8,18 @@ const { assert } = require("chai");
 
 describe("Checkout Page:", () => {
   beforeAll(() => {
+    console.log("\nScenario 3:\n");
     browser.get(data.app.url);
     browser.driver.manage().window().maximize();
     browser.sleep(2000); // Adding sleep to slow down execution for the demo
     loginPage.enterCredentials(data.app.username, data.app.password);
     loginPage.clickOnLogin();
-    browser.sleep(2000);
     homePage.addItemsToCart();
     homePage.continueToCheckOut();
   });
 
   it("Verify Shopping cart items", async () => {
-    console.log("Test : Verify items added to Cart");
+    console.log("\nTest : Add items again and Verify items added to Cart");
     var expectedItemsList = data.itemsList.items;
     itemsList = await checkoutPage.getCartItems();
     for (let item of itemsList) {
@@ -29,7 +29,7 @@ describe("Checkout Page:", () => {
   });
 
   it("Enter User Details and Finish", async () => {
-    console.log("Test : Complete Checkout");
+    console.log("\nTest : Complete Checkout");
     checkoutPage.clickCheckOutOnCartPage();
     checkoutPage.enterUserDetails("John", "Doe", "51000");
     checkoutPage.clickContinueButton();
