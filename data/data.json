@@ -1,0 +1,10 @@
+{
+  "application": {
+    "url": "http://saucedemo.com",
+    "username": "standard_user",
+    "password": "secret_sauce"
+  },
+  "itemsList": {
+    "items": ["Sauce Labs Backpack", "Sauce Labs Bike Light"]
+  }
+}

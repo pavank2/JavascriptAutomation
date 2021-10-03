@@ -36,6 +36,7 @@ class CheckoutPage {
   };
 
   getConfirmationMessage = () => {
+    browser.sleep(2000);
     return this.confirmationMessage;
   };
 }

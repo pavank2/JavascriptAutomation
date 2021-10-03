@@ -1,9 +1,3 @@
-var fs = require("fs");
-var path = require("path");
-
-//setDefaultTimeout(60 * 1000);
-var HtmlReporter = require("protractor-beautiful-reporter");
-
 exports.config = {
   seleniumAddress: "http://localhost:4444/wd/hub",
   specs: ["tests/*.spec.js"],
@@ -12,13 +6,25 @@ exports.config = {
 
   capabilities: {
     browserName: "chrome",
+    acceptInsecureCerts: true,
   },
 
   onPrepare: async () => {
     await browser.waitForAngularEnabled(false);
+    let HtmlReporter = require("protractor-beautiful-reporter");
     jasmine.getEnv().addReporter(
       new HtmlReporter({
-        baseDirectory: "reports/screenshots",
+        baseDirectory: "reports",
+        screenshotsSubfolder: "screenshotsOnFailure",
+        takeScreenShotsOnlyForFailedSpecs: true,
+        jsonsSubfolder: "jsonFiles",
+        excludeSkippedSpecs: true,
+        preserveDirectory: false,
+        clientDefaults: {
+          showTotalDurationIn: "header",
+          totalDurationFormat: "h:m:s",
+          gatherBrowserLogs: true,
+        },
       }).getJasmine2Reporter()
     );
   },

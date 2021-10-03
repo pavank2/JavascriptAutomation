@@ -1,10 +1,4 @@
 const { element, browser, By } = require("protractor");
-//const { protractor } = require("protractor/built/ptor");
-
-// var chai = require("chai");
-// var chaiAsPromised = require("chai-as-promised");
-// chai.use(chaiAsPromised);
-// var expect = chai.expect;
 
 var EC = protractor.ExpectedConditions;
 
@@ -23,6 +17,10 @@ class LoginPage {
   clickOnLogin = () => {
     browser.sleep(2000);
     this.loginBtn.click();
+  };
+
+  getLoginButton = () => {
+    return this.loginBtn;
   };
 }
 
