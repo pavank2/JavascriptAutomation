@@ -14,6 +14,7 @@ There are 3 scenarios which are part of 3 Spec files. Total tests are 6.
 - HomePageTest.spec.js : Logs in, adds item to cart and removes item from cart
 - E2EPurchase.spec.js : Logs in and completes the E2E Purchase flow
 
+- Note: "Sleep" function is added in few of the steps to slow down execution for demo purposes.
 ## Recommended Configuration
 - Windows 10
 - node.js 16.10.0
