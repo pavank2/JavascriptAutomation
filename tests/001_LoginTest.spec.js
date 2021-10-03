@@ -4,7 +4,7 @@ const homePage = require("../pages/HomePage");
 const data = require("../data/data.json");
 ec = protractor.ExpectedConditions;
 
-describe("Login Logout Scenario:", () => {
+describe("Login Logout Scenario", () => {
   beforeAll(() => {
     console.log("\nScenario 1:\n");
     browser.get(data.app.url);

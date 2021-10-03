@@ -5,7 +5,7 @@ const data = require("../data/data.json");
 
 ec = protractor.ExpectedConditions;
 
-describe("HomePage functions", () => {
+describe("HomePage Scenario", () => {
   beforeAll(() => {
     console.log("\nScenario 2:\n");
     browser.get(data.app.url);

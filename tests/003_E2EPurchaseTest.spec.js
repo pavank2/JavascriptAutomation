@@ -6,7 +6,7 @@ const data = require("../data/data.json");
 
 const { assert } = require("chai");
 
-describe("Checkout Page:", () => {
+describe("Checkout Scenario", () => {
   beforeAll(() => {
     console.log("\nScenario 3:\n");
     browser.get(data.app.url);
