@@ -18,14 +18,15 @@ describe("HomePage functions", () => {
   });
 
   it("Add items to cart", async () => {
+    console.log("Test : Add items to Cart");
     homePage.addItemsToCart();
     numOfItems = await homePage.getItemCount();
     expect(numOfItems).toEqual("2");
   });
 
   it("Remove items from cart", async () => {
+    console.log("Test : Remove items from Cart");
     homePage.removeItemsFromCart();
-
     expect(homePage.shoppingCartItems.isPresent()).toBe(false); //No items is shooping cart now
   });
 });

@@ -19,8 +19,7 @@ describe("Checkout Page:", () => {
   });
 
   it("Verify Shopping cart items", async () => {
-    var actualItemsList = [];
-    //  var expectedItemsList = ["Sauce Labs Backpack", "Sauce Labs Bike Light"];
+    console.log("Test : Verify items added to Cart");
     var expectedItemsList = data.itemsList.items;
     itemsList = await checkoutPage.getCartItems();
     for (let item of itemsList) {
@@ -30,6 +29,7 @@ describe("Checkout Page:", () => {
   });
 
   it("Enter User Details and Finish", async () => {
+    console.log("Test : Complete Checkout");
     checkoutPage.clickCheckOutOnCartPage();
     checkoutPage.enterUserDetails("John", "Doe", "51000");
     checkoutPage.clickContinueButton();

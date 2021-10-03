@@ -12,6 +12,7 @@ describe("Login Logout Scenario:", () => {
   });
 
   it("login to saucedemo homepage", async () => {
+    console.log("Test : Login to Saucedemo");
     loginPage.enterCredentials(
       data.application.username,
       data.application.password
@@ -23,6 +24,8 @@ describe("Login Logout Scenario:", () => {
   });
 
   it("logout from saucedemo", async () => {
+    console.log("Test : Logout from Saucedemo");
+
     await homePage.logout();
     browser.sleep(3000);
     expect(loginPage.getLoginButton().isEnabled()).toBe(true);

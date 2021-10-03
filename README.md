@@ -34,7 +34,7 @@ There are 3 scenarios which are part of 3 Spec files. Total tests are 6.
 3. Start webdriver manager
 
    - webdriver-manager start
-     You should see selenium driver has started at port 4444
+     (You should see selenium driver has started at port 4444)
 
 4. On a NEW terminal, clone the Automation project to your local machine
 
