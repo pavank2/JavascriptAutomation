@@ -6,17 +6,15 @@ ec = protractor.ExpectedConditions;
 
 describe("Login Logout Scenario:", () => {
   beforeAll(() => {
-    browser.get(data.application.url);
+    browser.get(data.app.url);
     browser.driver.manage().window().maximize();
     browser.sleep(1000); // Adding sleep to slow down execution for the demo
   });
 
   it("login to saucedemo homepage", async () => {
     console.log("Test : Login to Saucedemo");
-    loginPage.enterCredentials(
-      data.application.username,
-      data.application.password
-    );
+    loginPage.enterCredentials(data.app.username, data.app.password);
+
     loginPage.clickOnLogin();
     browser.sleep(1000);
     const homePageTitle = await homePage.getTitle().getText();

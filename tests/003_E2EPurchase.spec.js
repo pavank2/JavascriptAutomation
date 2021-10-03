@@ -8,10 +8,10 @@ const { assert } = require("chai");
 
 describe("Checkout Page:", () => {
   beforeAll(() => {
-    browser.get("https://saucedemo.com");
+    browser.get(data.app.url);
     browser.driver.manage().window().maximize();
     browser.sleep(2000); // Adding sleep to slow down execution for the demo
-    loginPage.enterCredentials("standard_user", "secret_sauce");
+    loginPage.enterCredentials(data.app.username, data.app.password);
     loginPage.clickOnLogin();
     browser.sleep(2000);
     homePage.addItemsToCart();

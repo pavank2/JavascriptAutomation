@@ -7,13 +7,10 @@ ec = protractor.ExpectedConditions;
 
 describe("HomePage functions", () => {
   beforeAll(() => {
-    browser.get(data.application.url);
+    browser.get(data.app.url);
     browser.driver.manage().window().maximize();
     browser.sleep(2000); // Just adding sleep to slow down execution for the demo
-    loginPage.enterCredentials(
-      data.application.username,
-      data.application.password
-    );
+    loginPage.enterCredentials(data.app.username, data.app.password);
     loginPage.clickOnLogin();
   });
 
