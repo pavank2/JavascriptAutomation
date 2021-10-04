@@ -17,6 +17,7 @@ There are 3 scenarios which are part of 3 Spec files. Total tests are 6.
 - Note: "Sleep" function is added in few of the steps to slow down execution for demo purposes.
 ## Recommended Configuration
 - Windows 10
+- Java JDK 15.0.2
 - node.js 16.10.0
 - npm 7.24.1
 - Chrome Version 94
