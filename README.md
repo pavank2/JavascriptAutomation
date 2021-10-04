@@ -19,6 +19,7 @@ There are 3 scenarios which are part of 3 Spec files. Total tests are 6.
 - Windows 10
 - node.js 16.10.0
 - npm 7.24.1
+- Chrome Version 94
 - Visual Studio Code (not mandatory for execution)
 
 ## Instructions to execute the Automation Suite
